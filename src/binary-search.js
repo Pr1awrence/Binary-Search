@@ -1,4 +1,6 @@
-function binarySearch(arr, num) {
+function BinarySearch() {}
+
+BinarySearch.prototype.binarySearch = function(arr, num) {
 
     if (arr === null) {
         throw new Error('array are null');
@@ -12,7 +14,7 @@ function binarySearch(arr, num) {
     if (num === undefined) {
         throw new Error('number are undefined');
     }
-    if (!arr instanceof Array) {
+    if (!(arr instanceof Array)) {
         throw new Error('array is not an Array');
     }
     if (typeof num !== 'number') {
@@ -46,4 +48,6 @@ function binarySearch(arr, num) {
         }
     }
     return index;
-}
+};
+
+module.exports = BinarySearch;
